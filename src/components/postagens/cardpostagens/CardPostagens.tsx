@@ -7,8 +7,8 @@ interface CardPostagensProps {
 
 function CardPostagem({ postagem }: CardPostagensProps) {
     return (
-        <div className='border-slate-900 border 
-            flex flex-col rounded overflow-hidden justify-between'>
+        <div className='
+            flex flex-col rounded-2xl overflow-hidden justify-between shadow-lg'>
                 
             <div>
                 <div className="flex w-full bg-indigo-400 py-2 px-4 items-center gap-4">
@@ -16,18 +16,20 @@ function CardPostagem({ postagem }: CardPostagensProps) {
                         src={postagem.usuario?.foto || 'https://www.svgrepo.com/show/192244/man-user.svg'}
                         className='h-12 rounded-full'
                         alt={postagem.usuario?.nome} />
-                    <h3 className='text-lg font-bold text-center uppercase'>
+                    <h3 className='text-lg font-bold text-center'>
                         {postagem.usuario?.nome}
                     </h3>
                 </div>
-                <div className='p-4 '>
+                <div className='p-4'>
                     <h4 className='text-lg font-semibold uppercase'>{postagem.titulo}</h4>
-                    <p>{postagem.texto}</p>
-                    <p>Tema: {postagem.tema?.descricao}</p>
-                    <p>Data: {new Intl.DateTimeFormat(undefined, {
-                        dateStyle: 'full',
-                        timeStyle: 'medium',
-                    }).format(new Date(postagem.data))}</p>
+                    <div className='flex-col justify-between h-full'>
+                        <p>{postagem.texto}</p>
+                        <p className='text-sm py-3'>Tema: <span className='w-fit p-1 rounded-sm bg-green-300 inset-shadow-sm'>{postagem.tema?.descricao}</span></p>
+                        <p className='text-sm'>Data: {new Intl.DateTimeFormat(undefined, {
+                            dateStyle: 'full',
+                            timeStyle: 'medium',
+                        }).format(new Date(postagem.data))}</p>
+                    </div>
                 </div>
             </div>
             <div className="flex">
