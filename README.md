@@ -30,3 +30,12 @@ Este repositório corresponde ao front-end do projeto **Blog Pessoal**, que cons
 ## 🔗 Back-End do Projeto
 👉 [Repositório Back-End](https://github.com/ihamari/GENERATION-bloco2-Spring-blogPessoal)
 
+## 🧠Aprendizados:
+- Consumo de API REST
+- Manipulação de estados e contexto global
+- Componentização e organização de código
+- Gerenciamento de autenticação com JWT no front-end
+- Criação de interfaces modernas, responsivas e acessíveis
+
+## 📝 Licença
+Este projeto foi desenvolvido com fins educacionais durante o bootcamp da Generation Brasil.
